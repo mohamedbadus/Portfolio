@@ -45,7 +45,7 @@
   /* ---------------- scroll reveals ---------------- */
 
   var revealTargets = document.querySelectorAll(
-    ".head, .about, .domain, .timeline > li, .card, .notes li, .certs__label,\n     .contact__line, .links, .colophon"
+    ".head, .about, .domain, .timeline > li, .notes li, .certs__label,\n     .contact__line, .links, .colophon"
   );
 
   if (!reduceMotion && "IntersectionObserver" in window) {
@@ -62,6 +62,33 @@
       el.style.transitionDelay = (i % 4) * 60 + "ms";
       observer.observe(el);
     });
+  }
+
+  /* ---------------- nav follows the section you are in ---------------- */
+
+  var navLinks = document.querySelectorAll(".nav__links a[href^='#']");
+
+  if (navLinks.length && "IntersectionObserver" in window) {
+    var byId = {};
+    var sections = [];
+
+    Array.prototype.forEach.call(navLinks, function (link) {
+      var section = document.querySelector(link.getAttribute("href"));
+      if (!section) return;
+      byId[section.id] = link;
+      sections.push(section);
+    });
+
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var link = byId[entry.target.id];
+        if (!link) return;
+        // A section counts as current while it crosses the middle of the screen.
+        link.classList.toggle("is-active", entry.isIntersecting);
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+
+    sections.forEach(function (section) { spy.observe(section); });
   }
 
   /* ---------------- footer year ---------------- */

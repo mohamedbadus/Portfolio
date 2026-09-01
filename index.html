@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mohamed Badusha — Full Stack Developer</title>
-<meta name="description" content="Full stack developer and computer science engineering graduate. Java, Python, JavaScript across the stack, with machine learning projects in detection and prediction." />
+<meta name="description" content="Full stack developer at Zoho, working on Active Directory and single sign-on. Java, Python, C and JavaScript across the stack." />
 <meta name="theme-color" content="#07090F" />
 <meta property="og:title" content="Mohamed Badusha — Full Stack Developer" />
 <meta property="og:description" content="I build the whole path — the screen, the service behind it, and the data underneath." />
@@ -24,8 +24,8 @@
       mohamed&nbsp;badusha
     </a>
     <nav class="nav__links" aria-label="Sections">
+      <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -41,8 +41,8 @@
       <h1 class="hero__name">Mohamed<br />Badusha</h1>
       <p class="hero__thesis">I build the whole path — the screen, the service behind it, and the data underneath.</p>
       <p class="hero__sub">
-        Computer science engineering graduate working across the stack in Java, Python and
-        JavaScript, with a run of machine learning projects that detect and predict things.
+        Member Technical Staff at Zoho, working on Active Directory and single sign-on.
+        Strongest in Java and Python, and quick to pick up whatever the problem needs next.
       </p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="#contact">Get in touch</a>
@@ -82,10 +82,12 @@
             <span class="flow__v">SQL · Elasticsearch</span>
           </div>
         </div>
-        <p class="flow__status" aria-hidden="true">
-          <span class="flow__seal"></span>Response returned — page rendered
-        </p>
-        <button class="flow__replay" type="button" data-replay>Replay</button>
+        <div class="flow__foot">
+          <p class="flow__status" aria-hidden="true">
+            <span class="flow__seal"></span>Response returned — page rendered
+          </p>
+          <button class="flow__replay" type="button" data-replay>Replay</button>
+        </div>
       </div>
     </div>
   </section>
@@ -95,25 +97,24 @@
     <div class="wrap">
       <div class="head">
         <h2 class="head__label">About</h2>
-        <p class="head__note">what I actually do</p>
+        <p class="head__note">how I work</p>
       </div>
       <div class="about">
-        <!-- TODO(Badusha): this is draft copy — rewrite it in your own voice. -->
         <p class="about__lead">
-          I like being responsible for the whole request, not one slice of it.
+          Writing code is what I'm strongest at, and picking up something unfamiliar quickly is
+          the skill I lean on most.
         </p>
         <div class="about__cols">
           <p>
-            I finished my B.E. in Computer Science and Engineering in 2025 and spent most of it
-            building things end to end — the interface, the service behind it, and the model or
-            database it leans on. Java and Python are where I'm most comfortable; JavaScript,
-            HTML and CSS are how I get it in front of someone.
+            Java and Python are where I'm quickest, with C, C++ and JavaScript behind them. I care
+            about the whole path rather than one slice of it — the interface someone touches, the
+            service answering it, and the data underneath all belong to the same problem.
           </p>
           <p>
-            The projects I keep coming back to are detection problems: tuberculosis from scans,
-            disease in a plant leaf, sign language from a camera, whether a donor gives again.
-            Same shape every time — get the data honest, train something on it, then wrap it in
-            an interface a person can actually use.
+            At Zoho I work on Active Directory and single sign-on: directory integration and the
+            protocols that sit between a person and the application they are trying to reach. Most
+            of it was new to me when I started, and getting up to speed on it fast is exactly the
+            part I enjoy.
           </p>
         </div>
       </div>
@@ -130,11 +131,13 @@
 
       <div class="domain">
         <div class="domain__name">
-          <h3>Front end</h3>
-          <p>What the person on the other side actually touches.</p>
+          <h3>Identity &amp; access</h3>
+          <p>The sign-on and directory protocols I work with day to day.</p>
         </div>
         <ul class="chips">
-          <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+          <li>Active Directory</li><li>SAML 2.0</li><li>LDAP</li>
+          <li>OAuth</li><li>JSON Web Token (JWT)</li><li>RADIUS</li>
+          <li>WS-Federation</li><li>WS-Trust</li><li>Domain Controller</li>
         </ul>
       </div>
 
@@ -151,83 +154,22 @@
 
       <div class="domain">
         <div class="domain__name">
-          <h3>Identity &amp; access</h3>
-          <!-- TODO(Badusha): confirm these — they came from your LinkedIn, not the resume. -->
-          <p>Sign-on and directory protocols I work with.</p>
+          <h3>Front end</h3>
+          <p>What the person on the other side actually touches.</p>
         </div>
         <ul class="chips">
-          <li>OAuth</li><li>JSON Web Token (JWT)</li><li>SAML 2.0</li>
-          <li>WS-Federation</li><li>WS-Trust</li><li>LDAP</li>
-          <li>RADIUS</li><li>Active Directory</li><li>Domain Controller</li>
+          <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
         </ul>
       </div>
 
       <div class="domain">
         <div class="domain__name">
-          <h3>Data &amp; machine learning</h3>
-          <p>Search, scale, and the models behind the projects below.</p>
+          <h3>Data &amp; scale</h3>
+          <p>Search, throughput, and the models behind my university projects.</p>
         </div>
         <ul class="chips">
-          <li>Machine Learning</li><li>Elasticsearch</li><li>Load Balancing</li>
+          <li>Elasticsearch</li><li>Load Balancing</li><li>Machine Learning</li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================ WORK ============================ -->
-  <section class="band" id="work">
-    <div class="wrap">
-      <div class="head">
-        <h2 class="head__label">Selected work</h2>
-        <p class="head__note">4 projects · 2021 — 2024</p>
-      </div>
-
-      <!-- TODO(Badusha): add a repo link to each card, and expand the descriptions —
-           what data, what accuracy, what was hard. One concrete detail each beats three
-           generic sentences. -->
-      <div class="grid">
-        <article class="card">
-          <p class="card__kind">2023 — 2024 · Machine learning</p>
-          <h3 class="card__title">Blood Donation Prediction</h3>
-          <p class="card__desc">
-            A Python model that predicts blood donation from past donor records. Took third prize
-            at the Intel hackathon.
-          </p>
-          <ul class="chips chips--sm"><li>Python</li><li>Machine Learning</li></ul>
-          <a class="card__link" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <article class="card">
-          <p class="card__kind">2022 — 2023 · Android &amp; ML</p>
-          <h3 class="card__title">Sign Language Detection</h3>
-          <p class="card__desc">
-            Reads hand signs from a camera and turns them into text, wrapped in an Android app.
-          </p>
-          <ul class="chips chips--sm"><li>Python</li><li>Dart</li><li>Flutter</li></ul>
-          <a class="card__link" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <article class="card">
-          <p class="card__kind">2022 — 2023 · Android &amp; ML</p>
-          <h3 class="card__title">Plant Disease Detection</h3>
-          <p class="card__desc">
-            Classifies disease from a photo of a leaf, so the diagnosis happens in the field
-            rather than a lab.
-          </p>
-          <ul class="chips chips--sm"><li>Python</li><li>Dart</li><li>Flutter</li></ul>
-          <a class="card__link" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <article class="card">
-          <p class="card__kind">2021 — 2022 · Machine learning</p>
-          <h3 class="card__title">Tuberculosis Disease Detection</h3>
-          <p class="card__desc">
-            A detection model served through a Gradio interface, so it could be tried without
-            installing anything.
-          </p>
-          <ul class="chips chips--sm"><li>Python</li><li>Gradio</li></ul>
-          <a class="card__link" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
       </div>
     </div>
   </section>
@@ -241,30 +183,40 @@
       </div>
 
       <ol class="timeline">
-        <!-- TODO(Badusha): your current job. Nothing after graduation is on your resume,
-             so I could not fill this in. Title, company, dates, and two or three lines
-             of what you own. Delete this entry if you are between roles. -->
         <li>
           <article class="role">
-            <p class="role__when">2025 — Present</p>
+            <p class="role__when">Dec 2024 — Present<span class="role__span">1 yr 10 mos</span></p>
             <div class="role__body">
-              <h3 class="role__title">Job title <span class="role__at">at</span> Company name</h3>
-              <p class="role__where">City, Country · Full-time</p>
-              <ul class="role__points">
-                <li>What you build and own, in one line.</li>
-                <li>A problem you fixed, and what it was running on.</li>
-                <li>A number if you have one — users, requests, latency, releases shipped.</li>
-              </ul>
+              <h3 class="role__title">Zoho</h3>
+              <p class="role__where">Palladam, Tamil Nadu, India · On-site</p>
+
+              <!-- TODO(Badusha): add a line or two per role about what you actually built. -->
+              <ol class="stints">
+                <li class="stint">
+                  <p class="stint__title">Member Technical Staff <span class="stint__kind">Full-time</span></p>
+                  <p class="stint__when">May 2025 — Present · 1 yr 5 mos</p>
+                  <ul class="chips chips--sm"><li>Active Directory</li><li>SAML</li><li>Single sign-on</li></ul>
+                </li>
+                <li class="stint">
+                  <p class="stint__title">Technical Trainee <span class="stint__kind">Internship</span></p>
+                  <p class="stint__when">Feb 2025 — May 2025 · 4 mos</p>
+                  <ul class="chips chips--sm"><li>Java</li><li>C</li></ul>
+                </li>
+                <li class="stint">
+                  <p class="stint__title">Trainee <span class="stint__kind">Apprenticeship</span></p>
+                  <p class="stint__when">Dec 2024 — Feb 2025 · 3 mos</p>
+                </li>
+              </ol>
             </div>
           </article>
         </li>
 
         <li>
           <article class="role">
-            <p class="role__when">Jun 2023</p>
+            <p class="role__when">Jun 2023<span class="role__span">1 mo</span></p>
             <div class="role__body">
               <h3 class="role__title">Android Development Intern <span class="role__at">at</span> Gateway Software Solutions</h3>
-              <p class="role__where">Internship · one month</p>
+              <p class="role__where">Internship</p>
               <ul class="role__points">
                 <li>Built a To&nbsp;Do List application in Flutter and Dart, from screens through to local storage.</li>
               </ul>
@@ -274,10 +226,10 @@
 
         <li>
           <article class="role">
-            <p class="role__when">Dec 2022</p>
+            <p class="role__when">Dec 2022<span class="role__span">1 wk</span></p>
             <div class="role__body">
               <h3 class="role__title">In-plant Trainee <span class="role__at">at</span> ATAL Incubation Centre, IIIT Kottayam</h3>
-              <p class="role__where">Software development · one week</p>
+              <p class="role__where">Software development</p>
               <ul class="role__points">
                 <li>Short residential training on how software gets built and shipped inside a product team.</li>
               </ul>
@@ -324,7 +276,7 @@
       <ul class="notes">
         <li>
           <span class="notes__when">2023</span>
-          <span class="notes__what"><b>Third prize, Intel hackathon</b> — for Blood Donation Prediction.</span>
+          <span class="notes__what"><b>Third prize, Intel hackathon</b> — for a blood donation prediction model.</span>
         </li>
         <li>
           <span class="notes__when">2022</span>
@@ -337,14 +289,6 @@
         <li>
           <span class="notes__when">2022</span>
           <span class="notes__what"><b>NPTEL Elite &amp; Silver</b> — Problem Solving Through Programming in C, Jul to Oct.</span>
-        </li>
-        <li>
-          <span class="notes__when">2022</span>
-          <span class="notes__what"><b>Ideathon, SNS Institute of Technology</b> — presented a mobile proposal for faster emergency medical support.</span>
-        </li>
-        <li>
-          <span class="notes__when">2023</span>
-          <span class="notes__what"><b>Altair IoT SmartWorks</b> — fundamentals examination.</span>
         </li>
       </ul>
 
@@ -368,7 +312,7 @@
   <div class="wrap">
     <div class="head">
       <h2 class="head__label">Contact</h2>
-      <p class="head__note">open to opportunities</p>
+      <p class="head__note">open to conversations</p>
     </div>
     <p class="contact__line">Building something end to end? I'd like to hear about it.</p>
     <ul class="links">
@@ -379,7 +323,6 @@
         </a>
       </li>
       <li>
-        <!-- TODO(Badusha): your resume lists /in/mohamed-badusha-a-40659824b — confirm which is current. -->
         <a href="https://www.linkedin.com/in/mohamed-bas" target="_blank" rel="noopener">
           <span class="links__k">LinkedIn</span>
           <span class="links__v">in/mohamed-bas</span>

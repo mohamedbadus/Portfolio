@@ -137,7 +137,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border-bottom: 1px solid transparent;
   transition: color .18s ease, border-color .18s ease;
 }
-.nav__links a:hover { color: var(--text); border-bottom-color: var(--signal); }
+.nav__links a:hover,
+.nav__links a.is-active { color: var(--text); border-bottom-color: var(--signal); }
 
 /* ============================== HERO ============================== */
 
@@ -194,12 +195,31 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .btn--primary { background: var(--signal); border-color: var(--signal); color: var(--void); }
 .btn--primary:hover { background: #6FD0FF; border-color: #6FD0FF; color: var(--void); }
 
-/* ====================== SIGNATURE: SSO ROUND TRIP ====================== */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.hero__eyebrow,
+.hero__name,
+.hero__thesis,
+.hero__sub,
+.hero__actions,
+.hero .flow { animation: riseIn .7s cubic-bezier(.2, .7, .3, 1) both; }
+
+.hero__eyebrow { animation-delay: .05s; }
+.hero__name    { animation-delay: .11s; }
+.hero__thesis  { animation-delay: .19s; }
+.hero__sub     { animation-delay: .25s; }
+.hero__actions { animation-delay: .31s; }
+.hero .flow    { animation-delay: .39s; }
+
+/* ====================== SIGNATURE: THE ROUND TRIP ====================== */
 
 .flow {
   position: relative;
   margin-top: clamp(52px, 8vw, 88px);
-  padding: 30px clamp(18px, 3vw, 30px) 26px;
+  padding: 26px clamp(18px, 3vw, 30px);
   border: var(--rule);
   border-radius: 4px;
   background:
@@ -279,14 +299,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   z-index: 3;
 }
 
+.flow__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-soft);
+}
+
 .flow__status {
   display: flex;
   align-items: center;
   gap: 9px;
-  margin-top: 24px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line-soft);
-  font: 400 .74rem/1 var(--mono);
+  font: 400 .74rem/1.4 var(--mono);
   letter-spacing: .04em;
   color: var(--dim);
   opacity: 0;
@@ -301,9 +328,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .flow__replay {
-  position: absolute;
-  top: 14px; right: 14px;
-  padding: 5px 11px;
+  flex: 0 0 auto;
+  padding: 6px 13px;
   background: transparent;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -345,7 +371,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ============================== SECTIONS ============================== */
 
-.band { padding: clamp(56px, 9vw, 104px) 0; }
+.band { padding: clamp(52px, 7.5vw, 88px) 0; }
 
 section[id], footer[id] { scroll-margin-top: 68px; }
 
@@ -459,6 +485,14 @@ section[id], footer[id] { scroll-margin-top: 68px; }
   color: var(--signal);
 }
 
+.role__span {
+  display: block;
+  margin-top: 4px;
+  font-size: .72rem;
+  letter-spacing: .04em;
+  color: var(--dim);
+}
+
 .role__title { font-size: 1.24rem; letter-spacing: -.02em; }
 
 .role__at { font-family: var(--body); font-weight: 400; color: var(--dim); }
@@ -486,52 +520,66 @@ section[id], footer[id] { scroll-margin-top: 68px; }
   background: var(--dim);
 }
 
-/* ------------------------------- work ------------------------------- */
+/* one company, three titles — the nesting is the promotion path */
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
+.stints {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 24px;
 }
 
-@media (min-width: 760px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
+.stints::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 22px;
+  bottom: 26px;
+  width: 1px;
+  background: var(--line);
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 26px 24px;
-  border: var(--rule);
-  border-radius: 4px;
-  background: linear-gradient(180deg, rgba(17, 24, 39, .5), rgba(11, 15, 23, .2));
-  transition: border-color .2s ease, transform .2s ease;
-}
-.card:hover { border-color: #2C3A50; transform: translateY(-2px); }
+.stint { position: relative; padding: 11px 0; }
 
-.card__kind {
-  font: 400 .66rem/1.4 var(--mono);
-  letter-spacing: .12em;
+.stint::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 18px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--void);
+  border: 1px solid var(--line);
+}
+
+.stint:first-child::before {
+  background: var(--signal);
+  border-color: var(--signal);
+  box-shadow: 0 0 10px rgba(76, 194, 255, .55);
+}
+
+.stint__title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: -.015em;
+}
+
+.stint__kind {
+  margin-left: 9px;
+  font: 400 .68rem/1 var(--mono);
+  letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--dim);
 }
 
-.card__title { font-size: 1.14rem; letter-spacing: -.02em; }
-
-.card__desc { color: var(--muted); font-size: .93rem; flex: 1 1 auto; }
-
-.card__link {
-  align-self: flex-start;
-  margin-top: 2px;
-  font: 500 .76rem/1 var(--mono);
-  color: var(--signal);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 3px;
-  transition: border-color .18s ease;
+.stint__when {
+  margin-top: 4px;
+  font: 400 .76rem/1.5 var(--mono);
+  color: var(--dim);
 }
-.card__link:hover { border-bottom-color: var(--signal); }
+
+.stint .chips { margin-top: 11px; }
 
 /* --------------------------- recognition --------------------------- */
 
@@ -677,6 +725,8 @@ section[id], footer[id] { scroll-margin-top: 68px; }
   .flow.is-playing .flow__pulse--out  { animation-name: travelOutV; }
   .flow.is-playing .flow__pulse--back { animation-name: travelBackV; }
 
+  .flow__foot { flex-wrap: wrap; gap: 12px; }
+
   .colophon { flex-direction: column; }
 }
 
@@ -706,6 +756,9 @@ section[id], footer[id] { scroll-margin-top: 68px; }
   }
 
   [data-reveal] { opacity: 1; transform: none; }
+
+  .hero__eyebrow, .hero__name, .hero__thesis,
+  .hero__sub, .hero__actions, .hero .flow { animation: none; opacity: 1; transform: none; }
 
   .flow__status { opacity: 1; color: var(--seal); }
   .flow__seal { background: var(--seal); box-shadow: 0 0 10px rgba(242, 182, 90, .8); }
