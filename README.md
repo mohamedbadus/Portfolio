@@ -1,4 +1,4 @@
-# Portfolio — Mohamed Badusha
+# Portfolio - Mohamed Badusha
 
 Static one-page portfolio. No build step, no dependencies, no tracking.
 
@@ -11,7 +11,7 @@ assets/js/main.js     SSO flow animation, scroll reveals
 
 ## Preview locally
 
-Open `index.html` in a browser. That's it — there is nothing to install or run.
+Open `index.html` in a browser. That's it - there is nothing to install or run.
 
 If you want a local server (needed only if you later add `fetch` calls):
 
@@ -28,7 +28,7 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 
 ## Editing
 
-All copy lives in `index.html`. Search for `TODO(Badusha)` — those are the
+All copy lives in `index.html`. Search for `TODO(Badusha)` - those are the
 placeholders that still need real content:
 
 - what you actually built in each Zoho role

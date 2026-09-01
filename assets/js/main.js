@@ -91,6 +91,31 @@
     sections.forEach(function (section) { spy.observe(section); });
   }
 
+  /* ---------------- how far down the page you are ---------------- */
+
+  var progress = document.querySelector("[data-progress]");
+
+  if (progress) {
+    var ticking = false;
+
+    var draw = function () {
+      var doc = document.documentElement;
+      var scrollable = doc.scrollHeight - window.innerHeight;
+      var ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+      progress.style.width = Math.max(0, Math.min(1, ratio)) * 100 + "%";
+      ticking = false;
+    };
+
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(draw);
+    }, { passive: true });
+
+    window.addEventListener("resize", draw, { passive: true });
+    draw();
+  }
+
   /* ---------------- footer year ---------------- */
 
   var year = document.querySelector("[data-year]");

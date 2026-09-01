@@ -3,15 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mohamed Badusha — Full Stack Developer</title>
+<title>Mohamed Badusha · Full Stack Developer</title>
 <meta name="description" content="Full stack developer at Zoho, working on Active Directory and single sign-on. Java, Python, C and JavaScript across the stack." />
 <meta name="theme-color" content="#07090F" />
-<meta property="og:title" content="Mohamed Badusha — Full Stack Developer" />
-<meta property="og:description" content="I build the whole path — the screen, the service behind it, and the data underneath." />
+<meta property="og:title" content="Mohamed Badusha · Full Stack Developer" />
+<meta property="og:description" content="I build the whole path: the screen, the service behind it, and the data underneath." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -20,7 +22,12 @@
 <header class="nav">
   <div class="nav__inner">
     <a class="nav__mark" href="#top">
-      <span class="nav__dot" aria-hidden="true"></span>
+      <svg class="nav__logo" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path d="M7 12h12" stroke="#4CC2FF" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="25" cy="12" r="2.2" fill="#4CC2FF"/>
+        <path d="M13 20h12" stroke="#F2B65A" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="7" cy="20" r="2.2" fill="#F2B65A"/>
+      </svg>
       mohamed&nbsp;badusha
     </a>
     <nav class="nav__links" aria-label="Sections">
@@ -30,6 +37,7 @@
       <a href="#contact">Contact</a>
     </nav>
   </div>
+  <div class="nav__progress" aria-hidden="true"><span data-progress></span></div>
 </header>
 
 <main id="main">
@@ -37,17 +45,25 @@
   <!-- ============================ HERO ============================ -->
   <section class="hero" id="top">
     <div class="wrap">
-      <p class="hero__eyebrow">Full Stack Developer — Tamil Nadu, India</p>
-      <h1 class="hero__name">Mohamed<br />Badusha</h1>
-      <p class="hero__thesis">I build the whole path — the screen, the service behind it, and the data underneath.</p>
+      <div class="hero__grid">
+      <div class="hero__text">
+      <p class="hero__eyebrow">Full Stack Developer&nbsp;· Tamil Nadu, India</p>
+      <h1 class="hero__name">Mohamed<br /><span class="hero__outline">Badusha</span></h1>
+      <p class="hero__thesis">I build <span class="mark">the whole path</span>: the screen, the service behind it, and the data underneath.</p>
       <p class="hero__sub">
-        Member Technical Staff at Zoho, working on Active Directory and single sign-on.
-        Strongest in Java and Python, and quick to pick up whatever the problem needs next.
+        Member Technical Staff at Zoho, building a product around Active Directory and single
+        sign-on. Strongest in Java and Python, and quick to pick up whatever the problem needs next.
       </p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="#contact">Get in touch</a>
         <a class="btn" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/mohamed-bas" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      </div>
+
+      <figure class="portrait">
+        <img src="assets/img/mohamed-badusha.jpg" alt="Mohamed Badusha" width="1000" height="1250" />
+      </figure>
       </div>
     </div>
 
@@ -84,7 +100,7 @@
         </div>
         <div class="flow__foot">
           <p class="flow__status" aria-hidden="true">
-            <span class="flow__seal"></span>Response returned — page rendered
+            <span class="flow__seal"></span>Response returned · page rendered
           </p>
           <button class="flow__replay" type="button" data-replay>Replay</button>
         </div>
@@ -107,14 +123,14 @@
         <div class="about__cols">
           <p>
             Java and Python are where I'm quickest, with C, C++ and JavaScript behind them. I care
-            about the whole path rather than one slice of it — the interface someone touches, the
+            about the whole path rather than one slice of it. The interface someone touches, the
             service answering it, and the data underneath all belong to the same problem.
           </p>
           <p>
-            At Zoho I work on Active Directory and single sign-on: directory integration and the
-            protocols that sit between a person and the application they are trying to reach. Most
-            of it was new to me when I started, and getting up to speed on it fast is exactly the
-            part I enjoy.
+            At Zoho I am developing a product built on Active Directory and single sign-on:
+            directory integration, and the protocols that sit between a person and the application
+            they are trying to reach. Most of it was new to me when I started, and getting up to
+            speed on it fast is exactly the part I enjoy.
           </p>
         </div>
       </div>
@@ -185,7 +201,7 @@
       <ol class="timeline">
         <li>
           <article class="role">
-            <p class="role__when">Dec 2024 — Present<span class="role__span">1 yr 10 mos</span></p>
+            <p class="role__when">Dec 2024 - Present<span class="role__span">1 yr 10 mos</span></p>
             <div class="role__body">
               <h3 class="role__title">Zoho</h3>
               <p class="role__where">Palladam, Tamil Nadu, India · On-site</p>
@@ -194,17 +210,18 @@
               <ol class="stints">
                 <li class="stint">
                   <p class="stint__title">Member Technical Staff <span class="stint__kind">Full-time</span></p>
-                  <p class="stint__when">May 2025 — Present · 1 yr 5 mos</p>
+                  <p class="stint__when">May 2025 - Present · 1 yr 5 mos</p>
+                  <p class="stint__what">Developing a product built on Active Directory and single sign-on.</p>
                   <ul class="chips chips--sm"><li>Active Directory</li><li>SAML</li><li>Single sign-on</li></ul>
                 </li>
                 <li class="stint">
                   <p class="stint__title">Technical Trainee <span class="stint__kind">Internship</span></p>
-                  <p class="stint__when">Feb 2025 — May 2025 · 4 mos</p>
+                  <p class="stint__when">Feb 2025 - May 2025 · 4 mos</p>
                   <ul class="chips chips--sm"><li>Java</li><li>C</li></ul>
                 </li>
                 <li class="stint">
                   <p class="stint__title">Trainee <span class="stint__kind">Apprenticeship</span></p>
-                  <p class="stint__when">Dec 2024 — Feb 2025 · 3 mos</p>
+                  <p class="stint__when">Dec 2024 - Feb 2025 · 3 mos</p>
                 </li>
               </ol>
             </div>
@@ -250,12 +267,12 @@
       <ol class="timeline">
         <li>
           <article class="role">
-            <p class="role__when">2021 — 2025</p>
+            <p class="role__when">2021 - 2025</p>
             <div class="role__body">
               <h3 class="role__title">B.E. Computer Science and Engineering</h3>
-              <p class="role__where">KIT — Kalaignarkarunanidhi Institute of Technology, Coimbatore</p>
+              <p class="role__where">KIT, Kalaignarkarunanidhi Institute of Technology, Coimbatore</p>
               <ul class="role__points">
-                <!-- TODO(Badusha): replace with your final CGPA — 8.18 was through 6th semester. -->
+                <!-- TODO(Badusha): replace with your final CGPA. 8.18 was through the 6th semester. -->
                 <li>CGPA 8.18 through the sixth semester.</li>
               </ul>
             </div>
@@ -270,38 +287,28 @@
     <div class="wrap">
       <div class="head">
         <h2 class="head__label">Recognition</h2>
-        <p class="head__note">competitions &amp; certifications</p>
+        <p class="head__note">awards &amp; results</p>
       </div>
 
       <ul class="notes">
         <li>
           <span class="notes__when">2023</span>
-          <span class="notes__what"><b>Third prize, Intel hackathon</b> — for a blood donation prediction model.</span>
+          <span class="notes__what"><b>Third prize, Intel hackathon</b> for a blood donation prediction model.</span>
         </li>
         <li>
           <span class="notes__when">2022</span>
-          <span class="notes__what"><b>First prize, IIT-PALS</b> — Online Voting System idea presentation.</span>
+          <span class="notes__what"><b>First prize, IIT-PALS</b> for an Online Voting System idea presentation.</span>
         </li>
         <li>
           <span class="notes__when">2023</span>
-          <span class="notes__what"><b>NPTEL Elite</b> — Programming in Java, Jan to Apr.</span>
+          <span class="notes__what"><b>NPTEL Elite</b> in Programming in Java, Jan to Apr.</span>
         </li>
         <li>
           <span class="notes__when">2022</span>
-          <span class="notes__what"><b>NPTEL Elite &amp; Silver</b> — Problem Solving Through Programming in C, Jul to Oct.</span>
+          <span class="notes__what"><b>NPTEL Elite &amp; Silver</b> in Problem Solving Through Programming in C, Jul to Oct.</span>
         </li>
       </ul>
 
-      <p class="certs__label">Course certifications</p>
-      <ul class="chips chips--sm">
-        <li>HackerRank — Java</li>
-        <li>HackerRank — Problem Solving</li>
-        <li>HackerRank — SQL</li>
-        <li>Infosys Springboard — Python Foundation</li>
-        <li>Infosys Springboard — AI Primer</li>
-        <li>Infosys Springboard — Internet of Things</li>
-        <li>Coursera — Applied AI with Deep Learning</li>
-      </ul>
     </div>
   </section>
 
@@ -337,7 +344,6 @@
     </ul>
     <p class="colophon">
       <span>© <span data-year>2026</span> Mohamed Badusha</span>
-      <span>Built as static HTML — no framework, no tracking.</span>
     </p>
   </div>
 </footer>
