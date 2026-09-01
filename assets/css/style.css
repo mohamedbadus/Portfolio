@@ -279,7 +279,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   margin: 0;
   max-width: 300px;
   border: var(--rule);
-  border-radius: 4px;
+  border-radius: clamp(20px, 2.4vw, 32px);
   overflow: hidden;
   background: #000;
   line-height: 0;
