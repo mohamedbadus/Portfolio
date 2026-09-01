@@ -64,6 +64,15 @@ body::after {
 
 img { max-width: 100%; display: block; }
 
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.ico {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+
 a { color: inherit; }
 
 h1, h2, h3 { font-family: var(--display); font-weight: 800; letter-spacing: -.03em; margin: 0; }
@@ -245,7 +254,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .btn {
   display: inline-flex;
   align-items: center;
-  padding: 11px 20px;
+  gap: 9px;
+  padding: 11px 18px 11px 16px;
   border: var(--rule);
   border-radius: 999px;
   font: 500 .7rem/1 var(--mono);
@@ -798,12 +808,26 @@ section[id], footer[id] { scroll-margin-top: 68px; }
 .links a:hover::after { opacity: 1; transform: none; }
 
 .links__k {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font: 500 .6rem/1 var(--mono);
   letter-spacing: .04em;
   color: var(--text);
 }
 
+.links__k .ico {
+  width: 17px;
+  height: 17px;
+  color: var(--dim);
+  transition: color .2s ease, transform .2s ease;
+}
+
+.links a:hover .links__k .ico { color: var(--signal); transform: scale(1.08); }
+
 .links__v {
+  /* lines up under the label, clear of the mark */
+  padding-left: 27px;
   font: 400 .64rem/1.4 var(--mono);
   color: var(--dim);
   overflow-wrap: anywhere;
