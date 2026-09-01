@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mohamed Badusha — Identity &amp; Access Management Engineer</title>
-<meta name="description" content="Identity and access management engineer working in federation protocols, directory services and the interop between them: SAML 2.0, WS-Federation, WS-Trust, OAuth, JWT, LDAP, RADIUS and Active Directory." />
+<title>Mohamed Badusha — Full Stack Developer</title>
+<meta name="description" content="Full stack developer and computer science engineering graduate. Java, Python, JavaScript across the stack, with machine learning projects in detection and prediction." />
 <meta name="theme-color" content="#07090F" />
-<meta property="og:title" content="Mohamed Badusha — Identity &amp; Access Management Engineer" />
-<meta property="og:description" content="Federation protocols, directory services, and the interop between them." />
+<meta property="og:title" content="Mohamed Badusha — Full Stack Developer" />
+<meta property="og:description" content="I build the whole path — the screen, the service behind it, and the data underneath." />
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,9 +24,9 @@
       mohamed&nbsp;badusha
     </a>
     <nav class="nav__links" aria-label="Sections">
-      <a href="#expertise">Expertise</a>
-      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
       <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -37,53 +37,53 @@
   <!-- ============================ HERO ============================ -->
   <section class="hero" id="top">
     <div class="wrap">
-      <p class="hero__eyebrow">Identity &amp; Access Management Engineer</p>
+      <p class="hero__eyebrow">Full Stack Developer — Tamil Nadu, India</p>
       <h1 class="hero__name">Mohamed<br />Badusha</h1>
-      <p class="hero__thesis">I build and operate the systems that decide who gets in.</p>
+      <p class="hero__thesis">I build the whole path — the screen, the service behind it, and the data underneath.</p>
       <p class="hero__sub">
-        Federation protocols, directory services, and the awkward interop between them —
-        SAML&nbsp;2.0, WS-Federation, WS-Trust, OAuth, JWT, LDAP, RADIUS and Active&nbsp;Directory.
+        Computer science engineering graduate working across the stack in Java, Python and
+        JavaScript, with a run of machine learning projects that detect and predict things.
       </p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="#contact">Get in touch</a>
-        <a class="btn" href="https://www.linkedin.com/in/mohamed-bas" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/mohamed-bas" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
 
-    <!-- Signature element: a single sign-on round trip -->
+    <!-- Signature element: one request, all the way down the stack and back -->
     <div class="wrap">
       <div class="flow" id="flow" role="img"
-           aria-label="A single sign-on round trip: the browser requests an application, the service provider issues a SAML request to the identity provider, the identity provider binds against Active Directory, and a signed assertion returns to establish the session.">
+           aria-label="One request travelling the full stack: the browser calls the interface, the interface calls the service, the service queries the data layer, and the response travels back to be rendered.">
         <div class="flow__track" aria-hidden="true">
           <div class="flow__node" style="--d:.15s">
             <span class="flow__k">Browser</span>
             <span class="flow__v">user agent</span>
           </div>
           <div class="flow__wire" style="--out:.45s;--back:4.10s">
-            <span class="flow__label">GET /app</span>
+            <span class="flow__label">GET /</span>
           </div>
           <div class="flow__node" style="--d:1.00s">
-            <span class="flow__k">Service Provider</span>
-            <span class="flow__v">relying party</span>
+            <span class="flow__k">Interface</span>
+            <span class="flow__v">HTML · CSS · JS</span>
           </div>
           <div class="flow__wire" style="--out:1.30s;--back:3.55s">
-            <span class="flow__label">SAMLRequest</span>
+            <span class="flow__label">REST call</span>
           </div>
           <div class="flow__node" style="--d:1.85s">
-            <span class="flow__k">Identity Provider</span>
-            <span class="flow__v">STS · token issuer</span>
+            <span class="flow__k">Service</span>
+            <span class="flow__v">Java · Python</span>
           </div>
           <div class="flow__wire" style="--out:2.15s;--back:3.00s">
-            <span class="flow__label">LDAP bind</span>
+            <span class="flow__label">query</span>
           </div>
           <div class="flow__node" style="--d:2.70s">
-            <span class="flow__k">Directory</span>
-            <span class="flow__v">Active Directory</span>
+            <span class="flow__k">Data</span>
+            <span class="flow__v">SQL · Elasticsearch</span>
           </div>
         </div>
         <p class="flow__status" aria-hidden="true">
-          <span class="flow__seal"></span>Signed assertion returned — session established
+          <span class="flow__seal"></span>Response returned — page rendered
         </p>
         <button class="flow__replay" type="button" data-replay>Replay</button>
       </div>
@@ -98,76 +98,136 @@
         <p class="head__note">what I actually do</p>
       </div>
       <div class="about">
-        <!-- TODO(Badusha): rewrite this in your own words — it's draft copy. -->
+        <!-- TODO(Badusha): this is draft copy — rewrite it in your own voice. -->
         <p class="about__lead">
-          I work on the layer most people never see: the handshake between a browser, an application
-          and a directory that happens before anyone reaches a dashboard.
+          I like being responsible for the whole request, not one slice of it.
         </p>
         <div class="about__cols">
           <p>
-            Most of that work is interop. An assertion a service provider quietly refuses. A WS-Trust
-            token issued for the wrong audience. A RADIUS request that times out only under load. An
-            LDAP filter that returns nothing at 2am and everything at 9. I like tracing those as much
-            as I like building the thing that gets traced.
+            I finished my B.E. in Computer Science and Engineering in 2025 and spent most of it
+            building things end to end — the interface, the service behind it, and the model or
+            database it leans on. Java and Python are where I'm most comfortable; JavaScript,
+            HTML and CSS are how I get it in front of someone.
           </p>
           <p>
-            Underneath it all is ordinary engineering — Java, C, C++ and Python — plus the operational
-            side of keeping identity available: load balancing, domain controllers, and enough
-            Elasticsearch to find the one request that failed.
+            The projects I keep coming back to are detection problems: tuberculosis from scans,
+            disease in a plant leaf, sign language from a camera, whether a donor gives again.
+            Same shape every time — get the data honest, train something on it, then wrap it in
+            an interface a person can actually use.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================ EXPERTISE ============================ -->
-  <section class="band" id="expertise">
+  <!-- ============================ SKILLS ============================ -->
+  <section class="band" id="skills">
     <div class="wrap">
       <div class="head">
-        <h2 class="head__label">Expertise</h2>
-        <p class="head__note">4 domains · 19 competencies</p>
+        <h2 class="head__label">Skills</h2>
+        <p class="head__note">4 areas · 21 skills</p>
       </div>
 
       <div class="domain">
         <div class="domain__name">
-          <h3>Federation &amp; protocols</h3>
-          <p>Browser-facing single sign-on and token exchange.</p>
+          <h3>Front end</h3>
+          <p>What the person on the other side actually touches.</p>
         </div>
         <ul class="chips">
-          <li>SAML 2.0</li><li>WS-Federation</li><li>WS-Trust</li>
-          <li>OAuth</li><li>JSON Web Token (JWT)</li><li>RADIUS</li>
+          <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
         </ul>
       </div>
 
       <div class="domain">
         <div class="domain__name">
-          <h3>Directory &amp; access</h3>
-          <p>Where the users, groups and trust relationships actually live.</p>
+          <h3>Back end &amp; languages</h3>
+          <p>Where the work and the correctness live.</p>
         </div>
         <ul class="chips">
-          <li>Active Directory</li><li>LDAP</li><li>Domain Controller</li>
+          <li>Java</li><li>Python</li><li>C</li><li>C++</li>
+          <li>SQL</li><li>JDBC</li>
         </ul>
       </div>
 
       <div class="domain">
         <div class="domain__name">
-          <h3>Languages</h3>
-          <p>What the integrations and services get written in.</p>
+          <h3>Identity &amp; access</h3>
+          <!-- TODO(Badusha): confirm these — they came from your LinkedIn, not the resume. -->
+          <p>Sign-on and directory protocols I work with.</p>
         </div>
         <ul class="chips">
-          <li>Java</li><li>C</li><li>C++</li>
-          <li>Python</li><li>JavaScript</li><li>HTML</li>
+          <li>OAuth</li><li>JSON Web Token (JWT)</li><li>SAML 2.0</li>
+          <li>WS-Federation</li><li>WS-Trust</li><li>LDAP</li>
+          <li>RADIUS</li><li>Active Directory</li><li>Domain Controller</li>
         </ul>
       </div>
 
       <div class="domain">
         <div class="domain__name">
-          <h3>Platforms &amp; data</h3>
-          <p>Keeping identity fast, observable and available.</p>
+          <h3>Data &amp; machine learning</h3>
+          <p>Search, scale, and the models behind the projects below.</p>
         </div>
         <ul class="chips">
-          <li>JDBC</li><li>Elasticsearch</li><li>Load Balancing</li><li>Machine Learning</li>
+          <li>Machine Learning</li><li>Elasticsearch</li><li>Load Balancing</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ WORK ============================ -->
+  <section class="band" id="work">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="head__label">Selected work</h2>
+        <p class="head__note">4 projects · 2021 — 2024</p>
+      </div>
+
+      <!-- TODO(Badusha): add a repo link to each card, and expand the descriptions —
+           what data, what accuracy, what was hard. One concrete detail each beats three
+           generic sentences. -->
+      <div class="grid">
+        <article class="card">
+          <p class="card__kind">2023 — 2024 · Machine learning</p>
+          <h3 class="card__title">Blood Donation Prediction</h3>
+          <p class="card__desc">
+            A Python model that predicts blood donation from past donor records. Took third prize
+            at the Intel hackathon.
+          </p>
+          <ul class="chips chips--sm"><li>Python</li><li>Machine Learning</li></ul>
+          <a class="card__link" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+
+        <article class="card">
+          <p class="card__kind">2022 — 2023 · Android &amp; ML</p>
+          <h3 class="card__title">Sign Language Detection</h3>
+          <p class="card__desc">
+            Reads hand signs from a camera and turns them into text, wrapped in an Android app.
+          </p>
+          <ul class="chips chips--sm"><li>Python</li><li>Dart</li><li>Flutter</li></ul>
+          <a class="card__link" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+
+        <article class="card">
+          <p class="card__kind">2022 — 2023 · Android &amp; ML</p>
+          <h3 class="card__title">Plant Disease Detection</h3>
+          <p class="card__desc">
+            Classifies disease from a photo of a leaf, so the diagnosis happens in the field
+            rather than a lab.
+          </p>
+          <ul class="chips chips--sm"><li>Python</li><li>Dart</li><li>Flutter</li></ul>
+          <a class="card__link" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
+
+        <article class="card">
+          <p class="card__kind">2021 — 2022 · Machine learning</p>
+          <h3 class="card__title">Tuberculosis Disease Detection</h3>
+          <p class="card__desc">
+            A detection model served through a Gradio interface, so it could be tried without
+            installing anything.
+          </p>
+          <ul class="chips chips--sm"><li>Python</li><li>Gradio</li></ul>
+          <a class="card__link" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
       </div>
     </div>
   </section>
@@ -180,31 +240,46 @@
         <p class="head__note">most recent first</p>
       </div>
 
-      <!-- TODO(Badusha): replace with real roles. Duplicate one <article> per role. -->
       <ol class="timeline">
+        <!-- TODO(Badusha): your current job. Nothing after graduation is on your resume,
+             so I could not fill this in. Title, company, dates, and two or three lines
+             of what you own. Delete this entry if you are between roles. -->
         <li>
           <article class="role">
-            <p class="role__when">2023 — Present</p>
+            <p class="role__when">2025 — Present</p>
             <div class="role__body">
               <h3 class="role__title">Job title <span class="role__at">at</span> Company name</h3>
               <p class="role__where">City, Country · Full-time</p>
               <ul class="role__points">
-                <li>What you owned, in one line.</li>
-                <li>A problem you fixed and the protocol or system it lived in.</li>
-                <li>A number if you have one — users, latency, uptime, integrations shipped.</li>
+                <li>What you build and own, in one line.</li>
+                <li>A problem you fixed, and what it was running on.</li>
+                <li>A number if you have one — users, requests, latency, releases shipped.</li>
               </ul>
             </div>
           </article>
         </li>
+
         <li>
           <article class="role">
-            <p class="role__when">20XX — 2023</p>
+            <p class="role__when">Jun 2023</p>
             <div class="role__body">
-              <h3 class="role__title">Job title <span class="role__at">at</span> Company name</h3>
-              <p class="role__where">City, Country · Full-time</p>
+              <h3 class="role__title">Android Development Intern <span class="role__at">at</span> Gateway Software Solutions</h3>
+              <p class="role__where">Internship · one month</p>
               <ul class="role__points">
-                <li>What you owned, in one line.</li>
-                <li>A problem you fixed and the protocol or system it lived in.</li>
+                <li>Built a To&nbsp;Do List application in Flutter and Dart, from screens through to local storage.</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="role">
+            <p class="role__when">Dec 2022</p>
+            <div class="role__body">
+              <h3 class="role__title">In-plant Trainee <span class="role__at">at</span> ATAL Incubation Centre, IIIT Kottayam</h3>
+              <p class="role__where">Software development · one week</p>
+              <ul class="role__points">
+                <li>Short residential training on how software gets built and shipped inside a product team.</li>
               </ul>
             </div>
           </article>
@@ -213,38 +288,76 @@
     </div>
   </section>
 
-  <!-- ============================ WORK ============================ -->
-  <section class="band" id="work">
+  <!-- ============================ EDUCATION ============================ -->
+  <section class="band" id="education">
     <div class="wrap">
       <div class="head">
-        <h2 class="head__label">Selected work</h2>
-        <p class="head__note">projects &amp; write-ups</p>
+        <h2 class="head__label">Education</h2>
+        <p class="head__note">Coimbatore, Tamil Nadu</p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <article class="role">
+            <p class="role__when">2021 — 2025</p>
+            <div class="role__body">
+              <h3 class="role__title">B.E. Computer Science and Engineering</h3>
+              <p class="role__where">KIT — Kalaignarkarunanidhi Institute of Technology, Coimbatore</p>
+              <ul class="role__points">
+                <!-- TODO(Badusha): replace with your final CGPA — 8.18 was through 6th semester. -->
+                <li>CGPA 8.18 through the sixth semester.</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================ RECOGNITION ============================ -->
+  <section class="band" id="recognition">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="head__label">Recognition</h2>
+        <p class="head__note">competitions &amp; certifications</p>
       </div>
 
-      <!-- TODO(Badusha): replace with real projects, or delete this whole section. -->
-      <div class="grid">
-        <article class="card">
-          <p class="card__kind">Project</p>
-          <h3 class="card__title">Project name</h3>
-          <p class="card__desc">One or two sentences: what it does and what was hard about it.</p>
-          <ul class="chips chips--sm"><li>Java</li><li>SAML 2.0</li><li>LDAP</li></ul>
-          <a class="card__link" href="#">View repository</a>
-        </article>
-        <article class="card">
-          <p class="card__kind">Project</p>
-          <h3 class="card__title">Project name</h3>
-          <p class="card__desc">One or two sentences: what it does and what was hard about it.</p>
-          <ul class="chips chips--sm"><li>Python</li><li>Elasticsearch</li></ul>
-          <a class="card__link" href="#">View repository</a>
-        </article>
-        <article class="card">
-          <p class="card__kind">Project</p>
-          <h3 class="card__title">Project name</h3>
-          <p class="card__desc">One or two sentences: what it does and what was hard about it.</p>
-          <ul class="chips chips--sm"><li>C++</li><li>Machine Learning</li></ul>
-          <a class="card__link" href="#">View repository</a>
-        </article>
-      </div>
+      <ul class="notes">
+        <li>
+          <span class="notes__when">2023</span>
+          <span class="notes__what"><b>Third prize, Intel hackathon</b> — for Blood Donation Prediction.</span>
+        </li>
+        <li>
+          <span class="notes__when">2022</span>
+          <span class="notes__what"><b>First prize, IIT-PALS</b> — Online Voting System idea presentation.</span>
+        </li>
+        <li>
+          <span class="notes__when">2023</span>
+          <span class="notes__what"><b>NPTEL Elite</b> — Programming in Java, Jan to Apr.</span>
+        </li>
+        <li>
+          <span class="notes__when">2022</span>
+          <span class="notes__what"><b>NPTEL Elite &amp; Silver</b> — Problem Solving Through Programming in C, Jul to Oct.</span>
+        </li>
+        <li>
+          <span class="notes__when">2022</span>
+          <span class="notes__what"><b>Ideathon, SNS Institute of Technology</b> — presented a mobile proposal for faster emergency medical support.</span>
+        </li>
+        <li>
+          <span class="notes__when">2023</span>
+          <span class="notes__what"><b>Altair IoT SmartWorks</b> — fundamentals examination.</span>
+        </li>
+      </ul>
+
+      <p class="certs__label">Course certifications</p>
+      <ul class="chips chips--sm">
+        <li>HackerRank — Java</li>
+        <li>HackerRank — Problem Solving</li>
+        <li>HackerRank — SQL</li>
+        <li>Infosys Springboard — Python Foundation</li>
+        <li>Infosys Springboard — AI Primer</li>
+        <li>Infosys Springboard — Internet of Things</li>
+        <li>Coursera — Applied AI with Deep Learning</li>
+      </ul>
     </div>
   </section>
 
@@ -255,11 +368,18 @@
   <div class="wrap">
     <div class="head">
       <h2 class="head__label">Contact</h2>
-      <p class="head__note">open to conversations</p>
+      <p class="head__note">open to opportunities</p>
     </div>
-    <p class="contact__line">Working on identity, or stuck inside a protocol trace? Send it over.</p>
+    <p class="contact__line">Building something end to end? I'd like to hear about it.</p>
     <ul class="links">
       <li>
+        <a href="mailto:baduabdukansal@gmail.com">
+          <span class="links__k">Email</span>
+          <span class="links__v">baduabdukansal@gmail.com</span>
+        </a>
+      </li>
+      <li>
+        <!-- TODO(Badusha): your resume lists /in/mohamed-badusha-a-40659824b — confirm which is current. -->
         <a href="https://www.linkedin.com/in/mohamed-bas" target="_blank" rel="noopener">
           <span class="links__k">LinkedIn</span>
           <span class="links__v">in/mohamed-bas</span>
@@ -275,13 +395,6 @@
         <a href="https://instagram.com/mohamed_badusha__" target="_blank" rel="noopener">
           <span class="links__k">Instagram</span>
           <span class="links__v">@mohamed_badusha__</span>
-        </a>
-      </li>
-      <li>
-        <!-- TODO(Badusha): confirm which address to publish, then set both href and label. -->
-        <a href="mailto:you@example.com">
-          <span class="links__k">Email</span>
-          <span class="links__v">you@example.com</span>
         </a>
       </li>
     </ul>

@@ -45,7 +45,7 @@
   /* ---------------- scroll reveals ---------------- */
 
   var revealTargets = document.querySelectorAll(
-    ".head, .about, .domain, .timeline > li, .card, .contact__line, .links, .colophon"
+    ".head, .about, .domain, .timeline > li, .card, .notes li, .certs__label,\n     .contact__line, .links, .colophon"
   );
 
   if (!reduceMotion && "IntersectionObserver" in window) {
