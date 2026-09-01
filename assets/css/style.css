@@ -224,7 +224,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .mark {
-  background: linear-gradient(180deg, transparent 76%, rgba(76, 194, 255, .38) 76%, rgba(76, 194, 255, .38) 92%, transparent 92%);
+  /* A real underline, so it skips the descender of "path" instead of
+     slicing through it the way a background gradient does. */
+  text-decoration: underline;
+  text-decoration-color: rgba(76, 194, 255, .85);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+  text-decoration-skip-ink: auto;
 }
 
 .hero__sub {
