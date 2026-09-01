@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mohamed Badusha — Identity &amp; Access Management Engineer</title>
+<meta name="description" content="Identity and access management engineer working in federation protocols, directory services and the interop between them: SAML 2.0, WS-Federation, WS-Trust, OAuth, JWT, LDAP, RADIUS and Active Directory." />
+<meta name="theme-color" content="#07090F" />
+<meta property="og:title" content="Mohamed Badusha — Identity &amp; Access Management Engineer" />
+<meta property="og:description" content="Federation protocols, directory services, and the interop between them." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__mark" href="#top">
+      <span class="nav__dot" aria-hidden="true"></span>
+      mohamed&nbsp;badusha
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#expertise">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <p class="hero__eyebrow">Identity &amp; Access Management Engineer</p>
+      <h1 class="hero__name">Mohamed<br />Badusha</h1>
+      <p class="hero__thesis">I build and operate the systems that decide who gets in.</p>
+      <p class="hero__sub">
+        Federation protocols, directory services, and the awkward interop between them —
+        SAML&nbsp;2.0, WS-Federation, WS-Trust, OAuth, JWT, LDAP, RADIUS and Active&nbsp;Directory.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#contact">Get in touch</a>
+        <a class="btn" href="https://www.linkedin.com/in/mohamed-bas" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/mohamedbadus" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Signature element: a single sign-on round trip -->
+    <div class="wrap">
+      <div class="flow" id="flow" role="img"
+           aria-label="A single sign-on round trip: the browser requests an application, the service provider issues a SAML request to the identity provider, the identity provider binds against Active Directory, and a signed assertion returns to establish the session.">
+        <div class="flow__track" aria-hidden="true">
+          <div class="flow__node" style="--d:.15s">
+            <span class="flow__k">Browser</span>
+            <span class="flow__v">user agent</span>
+          </div>
+          <div class="flow__wire" style="--out:.45s;--back:4.10s">
+            <span class="flow__label">GET /app</span>
+          </div>
+          <div class="flow__node" style="--d:1.00s">
+            <span class="flow__k">Service Provider</span>
+            <span class="flow__v">relying party</span>
+          </div>
+          <div class="flow__wire" style="--out:1.30s;--back:3.55s">
+            <span class="flow__label">SAMLRequest</span>
+          </div>
+          <div class="flow__node" style="--d:1.85s">
+            <span class="flow__k">Identity Provider</span>
+            <span class="flow__v">STS · token issuer</span>
+          </div>
+          <div class="flow__wire" style="--out:2.15s;--back:3.00s">
+            <span class="flow__label">LDAP bind</span>
+          </div>
+          <div class="flow__node" style="--d:2.70s">
+            <span class="flow__k">Directory</span>
+            <span class="flow__v">Active Directory</span>
+          </div>
+        </div>
+        <p class="flow__status" aria-hidden="true">
+          <span class="flow__seal"></span>Signed assertion returned — session established
+        </p>
+        <button class="flow__replay" type="button" data-replay>Replay</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ ABOUT ============================ -->
+  <section class="band" id="about">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="head__label">About</h2>
+        <p class="head__note">what I actually do</p>
+      </div>
+      <div class="about">
+        <!-- TODO(Badusha): rewrite this in your own words — it's draft copy. -->
+        <p class="about__lead">
+          I work on the layer most people never see: the handshake between a browser, an application
+          and a directory that happens before anyone reaches a dashboard.
+        </p>
+        <div class="about__cols">
+          <p>
+            Most of that work is interop. An assertion a service provider quietly refuses. A WS-Trust
+            token issued for the wrong audience. A RADIUS request that times out only under load. An
+            LDAP filter that returns nothing at 2am and everything at 9. I like tracing those as much
+            as I like building the thing that gets traced.
+          </p>
+          <p>
+            Underneath it all is ordinary engineering — Java, C, C++ and Python — plus the operational
+            side of keeping identity available: load balancing, domain controllers, and enough
+            Elasticsearch to find the one request that failed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ EXPERTISE ============================ -->
+  <section class="band" id="expertise">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="head__label">Expertise</h2>
+        <p class="head__note">4 domains · 19 competencies</p>
+      </div>
+
+      <div class="domain">
+        <div class="domain__name">
+          <h3>Federation &amp; protocols</h3>
+          <p>Browser-facing single sign-on and token exchange.</p>
+        </div>
+        <ul class="chips">
+          <li>SAML 2.0</li><li>WS-Federation</li><li>WS-Trust</li>
+          <li>OAuth</li><li>JSON Web Token (JWT)</li><li>RADIUS</li>
+        </ul>
+      </div>
+
+      <div class="domain">
+        <div class="domain__name">
+          <h3>Directory &amp; access</h3>
+          <p>Where the users, groups and trust relationships actually live.</p>
+        </div>
+        <ul class="chips">
+          <li>Active Directory</li><li>LDAP</li><li>Domain Controller</li>
+        </ul>
+      </div>
+
+      <div class="domain">
+        <div class="domain__name">
+          <h3>Languages</h3>
+          <p>What the integrations and services get written in.</p>
+        </div>
+        <ul class="chips">
+          <li>Java</li><li>C</li><li>C++</li>
+          <li>Python</li><li>JavaScript</li><li>HTML</li>
+        </ul>
+      </div>
+
+      <div class="domain">
+        <div class="domain__name">
+          <h3>Platforms &amp; data</h3>
+          <p>Keeping identity fast, observable and available.</p>
+        </div>
+        <ul class="chips">
+          <li>JDBC</li><li>Elasticsearch</li><li>Load Balancing</li><li>Machine Learning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ EXPERIENCE ============================ -->
+  <section class="band" id="experience">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="head__label">Experience</h2>
+        <p class="head__note">most recent first</p>
+      </div>
+
+      <!-- TODO(Badusha): replace with real roles. Duplicate one <article> per role. -->
+      <ol class="timeline">
+        <li>
+          <article class="role">
+            <p class="role__when">2023 — Present</p>
+            <div class="role__body">
+              <h3 class="role__title">Job title <span class="role__at">at</span> Company name</h3>
+              <p class="role__where">City, Country · Full-time</p>
+              <ul class="role__points">
+                <li>What you owned, in one line.</li>
+                <li>A problem you fixed and the protocol or system it lived in.</li>
+                <li>A number if you have one — users, latency, uptime, integrations shipped.</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="role">
+            <p class="role__when">20XX — 2023</p>
+            <div class="role__body">
+              <h3 class="role__title">Job title <span class="role__at">at</span> Company name</h3>
+              <p class="role__where">City, Country · Full-time</p>
+              <ul class="role__points">
+                <li>What you owned, in one line.</li>
+                <li>A problem you fixed and the protocol or system it lived in.</li>
+              </ul>
+            </div>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================ WORK ============================ -->
+  <section class="band" id="work">
+    <div class="wrap">
+      <div class="head">
+        <h2 class="head__label">Selected work</h2>
+        <p class="head__note">projects &amp; write-ups</p>
+      </div>
+
+      <!-- TODO(Badusha): replace with real projects, or delete this whole section. -->
+      <div class="grid">
+        <article class="card">
+          <p class="card__kind">Project</p>
+          <h3 class="card__title">Project name</h3>
+          <p class="card__desc">One or two sentences: what it does and what was hard about it.</p>
+          <ul class="chips chips--sm"><li>Java</li><li>SAML 2.0</li><li>LDAP</li></ul>
+          <a class="card__link" href="#">View repository</a>
+        </article>
+        <article class="card">
+          <p class="card__kind">Project</p>
+          <h3 class="card__title">Project name</h3>
+          <p class="card__desc">One or two sentences: what it does and what was hard about it.</p>
+          <ul class="chips chips--sm"><li>Python</li><li>Elasticsearch</li></ul>
+          <a class="card__link" href="#">View repository</a>
+        </article>
+        <article class="card">
+          <p class="card__kind">Project</p>
+          <h3 class="card__title">Project name</h3>
+          <p class="card__desc">One or two sentences: what it does and what was hard about it.</p>
+          <ul class="chips chips--sm"><li>C++</li><li>Machine Learning</li></ul>
+          <a class="card__link" href="#">View repository</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================ CONTACT ============================ -->
+<footer class="band contact" id="contact">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="head__label">Contact</h2>
+      <p class="head__note">open to conversations</p>
+    </div>
+    <p class="contact__line">Working on identity, or stuck inside a protocol trace? Send it over.</p>
+    <ul class="links">
+      <li>
+        <a href="https://www.linkedin.com/in/mohamed-bas" target="_blank" rel="noopener">
+          <span class="links__k">LinkedIn</span>
+          <span class="links__v">in/mohamed-bas</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/mohamedbadus" target="_blank" rel="noopener">
+          <span class="links__k">GitHub</span>
+          <span class="links__v">@mohamedbadus</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com/mohamed_badusha__" target="_blank" rel="noopener">
+          <span class="links__k">Instagram</span>
+          <span class="links__v">@mohamed_badusha__</span>
+        </a>
+      </li>
+      <li>
+        <!-- TODO(Badusha): confirm which address to publish, then set both href and label. -->
+        <a href="mailto:you@example.com">
+          <span class="links__k">Email</span>
+          <span class="links__v">you@example.com</span>
+        </a>
+      </li>
+    </ul>
+    <p class="colophon">
+      <span>© <span data-year>2026</span> Mohamed Badusha</span>
+      <span>Built as static HTML — no framework, no tracking.</span>
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
