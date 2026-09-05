@@ -91,6 +91,49 @@
     sections.forEach(function (section) { spy.observe(section); });
   }
 
+  /* ---------------- light and dark ---------------- */
+
+  var root = document.documentElement;
+  var toggle = document.querySelector("[data-theme-toggle]");
+
+  if (toggle) {
+    var systemLight = window.matchMedia("(prefers-color-scheme: light)");
+
+    // What is actually on screen: the explicit choice, else the system.
+    var current = function () {
+      return root.getAttribute("data-theme") || (systemLight.matches ? "light" : "dark");
+    };
+
+    var label = function () {
+      toggle.setAttribute("aria-label",
+        current() === "dark" ? "Switch to light theme" : "Switch to dark theme");
+    };
+
+    toggle.addEventListener("click", function () {
+      var next = current() === "dark" ? "light" : "dark";
+
+      if (!reduceMotion) {
+        root.classList.add("theme-anim");
+        window.setTimeout(function () { root.classList.remove("theme-anim"); }, 420);
+      }
+
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute("content", next === "dark" ? "#07090F" : "#F6F5F1");
+
+      label();
+    });
+
+    // Follow the system while no explicit choice has been made.
+    systemLight.addEventListener("change", function () {
+      if (!root.getAttribute("data-theme")) label();
+    });
+
+    label();
+  }
+
   /* ---------------- how far down the page you are ---------------- */
 
   var progress = document.querySelector("[data-progress]");
