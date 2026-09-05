@@ -28,11 +28,7 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 
 ## Editing
 
-All copy lives in `index.html`. Search for `TODO(Badusha)` - those are the
-placeholders that still need real content:
-
-- what you actually built in each Zoho role
-- your final CGPA (the site says 8.18 through the sixth semester)
+All copy lives in `index.html`.
 
 Colors and type are CSS custom properties at the top of `style.css`:
 `--signal` (cyan, a request in transit) and `--seal` (amber, a signed assertion).
