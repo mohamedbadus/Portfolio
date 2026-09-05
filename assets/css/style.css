@@ -182,14 +182,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .hero { padding: clamp(64px, 12vw, 132px) 0 clamp(34px, 5vw, 56px); }
 
-.hero__grid { display: grid; gap: clamp(26px, 5vw, 56px); }
-
-@media (min-width: 960px) {
-  .hero__grid {
-    grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
-    align-items: end;
-  }
-}
+/* Phone first: block flow, so the floated photo can pull the eyebrow and
+   the name up beside it instead of sitting on a line of its own. */
+.hero__grid { display: block; }
 
 .hero__eyebrow {
   /* wraps to two lines on a phone, so it needs real leading */
@@ -202,13 +197,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .hero__name {
-  font-size: clamp(3.4rem, 12vw, 7.6rem);
+  font-size: clamp(2.3rem, 10.5vw, 7.6rem);
   line-height: .88;
   letter-spacing: -.045em;
   margin-bottom: 30px;
 }
 
-/* In two columns the name has to fit its own column, not the viewport. */
+/* Beside a 140px float there is ~184px of line, so the phone size comes
+   down; in two columns it answers to the column, not the viewport. */
 @media (min-width: 960px) {
   .hero__name { font-size: clamp(2.9rem, 6.6vw, 6.6rem); }
 }
@@ -222,6 +218,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 .hero__thesis {
+  /* starts below the photo, so it never begins on a squeezed line */
+  clear: right;
   font-family: var(--display);
   font-weight: 600;
   font-size: clamp(1.25rem, 2.6vw, 1.85rem);
@@ -295,8 +293,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
    without dressing the whole site up as a terminal. */
 .portrait {
   position: relative;
-  margin: 0;
-  order: -1;              /* on a phone the photo leads */
+  float: right;
+  width: 140px;
+  margin: 2px 0 16px 18px;
   border: var(--rule);
   border-radius: 14px;
   overflow: hidden;
@@ -326,6 +325,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .portrait__dots i:nth-child(1) { background: var(--seal); }
 .portrait__dots i:nth-child(2) { background: var(--signal); }
 
+.portrait__long { display: none; }
+
 .portrait__file {
   font: 400 .58rem/1 var(--mono);
   letter-spacing: .04em;
@@ -338,16 +339,31 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   height: 100%;
   /* wide on a phone so it reads as a deliberate banner rather than a
      stranded thumbnail; upright once it has a column of its own */
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 50% 10%;
+  object-position: 50% 14%;
   filter: contrast(1.1) saturate(1.02);
 }
 
-/* Must follow the rule above, or the base aspect ratio wins the cascade. */
+/* Everything below must follow the rules it overrides, or the phone
+   values win the cascade at every width. */
 @media (min-width: 960px) {
-  .portrait { order: 0; }
+  .hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
+    gap: clamp(26px, 5vw, 56px);
+    align-items: end;
+  }
+
+  .portrait {
+    float: none;
+    width: auto;
+    margin: 0;
+    order: 1;             /* text keeps the left column */
+  }
+
   .portrait img { aspect-ratio: 4 / 5; object-position: 50% 16%; }
+  .portrait__long { display: inline; }
 }
 
 /* ====================== SIGNATURE: THE ROUND TRIP ====================== */
