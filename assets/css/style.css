@@ -290,33 +290,64 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* The studio backdrop has its own light falloff, so blending it into the page
    never reads as clean. It is framed instead, matching the panels elsewhere. */
+/* The photo is presented as an open file: a window bar with the filename,
+   which is the one place the page can look like a developer's own screen
+   without dressing the whole site up as a terminal. */
 .portrait {
   position: relative;
   margin: 0;
-  /* On a phone the photo leads, above the name, rather than trailing the
-     buttons where it read as an afterthought. */
-  order: -1;
-  max-width: 176px;
+  order: -1;              /* on a phone the photo leads */
   border: var(--rule);
-  border-radius: clamp(20px, 2.4vw, 32px);
+  border-radius: 14px;
   overflow: hidden;
-  background: #000;
+  background: var(--surface);
   line-height: 0;
   box-shadow: 0 30px 70px -40px rgba(139, 124, 255, .5);
 }
 
-@media (min-width: 960px) {
-  .portrait { order: 0; max-width: none; }
+.portrait__bar {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 13px;
+  background: var(--raise);
+  border-bottom: 1px solid var(--line);
+}
+
+.portrait__dots { display: flex; gap: 6px; }
+
+.portrait__dots i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line);
+}
+
+.portrait__dots i:nth-child(1) { background: var(--seal); }
+.portrait__dots i:nth-child(2) { background: var(--signal); }
+
+.portrait__file {
+  font: 400 .58rem/1 var(--mono);
+  letter-spacing: .04em;
+  color: var(--dim);
 }
 
 .portrait img {
   display: block;
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 5;
+  /* wide on a phone so it reads as a deliberate banner rather than a
+     stranded thumbnail; upright once it has a column of its own */
+  aspect-ratio: 16 / 11;
   object-fit: cover;
-  object-position: 50% 18%;
+  object-position: 50% 10%;
   filter: contrast(1.1) saturate(1.02);
+}
+
+/* Must follow the rule above, or the base aspect ratio wins the cascade. */
+@media (min-width: 960px) {
+  .portrait { order: 0; }
+  .portrait img { aspect-ratio: 4 / 5; object-position: 50% 16%; }
 }
 
 /* ====================== SIGNATURE: THE ROUND TRIP ====================== */
@@ -498,6 +529,8 @@ section[id], footer[id] { scroll-margin-top: 68px; }
   line-height: 1;
   color: var(--text);
 }
+
+.head__note::before { content: "// "; opacity: .55; }
 
 .head__note {
   font: 400 .6rem/1 var(--mono);
