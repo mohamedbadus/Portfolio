@@ -288,9 +288,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* The studio backdrop has its own light falloff, so blending it into the page
    never reads as clean. It is framed instead, matching the panels elsewhere. */
-/* The photo is presented as an open file: a window bar with the filename,
-   which is the one place the page can look like a developer's own screen
-   without dressing the whole site up as a terminal. */
+/* Floats right on a phone so the eyebrow and name run beside it; takes a
+   column of its own from 960px up. */
 .portrait {
   position: relative;
   float: right;
@@ -299,38 +298,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border: var(--rule);
   border-radius: 14px;
   overflow: hidden;
-  background: var(--surface);
+  background: #000;
   line-height: 0;
   box-shadow: 0 30px 70px -40px rgba(139, 124, 255, .5);
-}
-
-.portrait__bar {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  padding: 10px 13px;
-  background: var(--raise);
-  border-bottom: 1px solid var(--line);
-}
-
-.portrait__dots { display: flex; gap: 6px; }
-
-.portrait__dots i {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--line);
-}
-
-.portrait__dots i:nth-child(1) { background: var(--seal); }
-.portrait__dots i:nth-child(2) { background: var(--signal); }
-
-.portrait__long { display: none; }
-
-.portrait__file {
-  font: 400 .58rem/1 var(--mono);
-  letter-spacing: .04em;
-  color: var(--dim);
 }
 
 .portrait img {
@@ -363,7 +333,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   }
 
   .portrait img { aspect-ratio: 4 / 5; object-position: 50% 16%; }
-  .portrait__long { display: inline; }
 }
 
 /* ====================== SIGNATURE: THE ROUND TRIP ====================== */
